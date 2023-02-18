@@ -1,0 +1,4 @@
+Pillow==9.4.0
+requests==2.28.1
+streamlit==1.18.1
+transformers==4.26.0
