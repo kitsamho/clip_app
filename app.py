@@ -1,6 +1,7 @@
 from PIL import Image
 import requests
 
+
 from transformers import CLIPProcessor, CLIPModel
 import streamlit as st
 
