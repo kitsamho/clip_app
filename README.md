@@ -1,1 +1,1 @@
-# clip_app_huggingface
+# clip_utils_app
