@@ -2,3 +2,9 @@
 UNSPLASH_CATEGORIES: [ 'wallpapers','3d-renders','travel','nature','street-photography','experimental','textures-patterns',
                        'animals','architecture-interior','fashion-beauty','film','food-drink','people','spirituality',
                        'business-work','athletics','health','arts-culture' ]
+
+BBC_CATEGORIES: ['technology','business','politics','science_and_environment','health','education','entertainment_and_arts']
+
+
+CLIP_MODEL: ['openai/clip-vit-base-patch32']
+
