@@ -4,7 +4,7 @@ import streamlit as st
 
 
 @st.cache_resource
-def load_clip(clip_model):
+def load_clip(clip_model='openai/clip-vit-base-patch32'):
     """
     Load the CLIP model and its associated tokenizer and processor from a given pre-trained model.
 
