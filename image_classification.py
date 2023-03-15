@@ -1,6 +1,6 @@
 from backend.clip_functions import load_clip
+from backend.load import load_yaml
 from backend.pipeline_image_classification import get_unsplash_images, image_classification_loop
-from backend.load import *
 import streamlit as st
 
 

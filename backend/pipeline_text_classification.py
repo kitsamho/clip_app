@@ -1,8 +1,8 @@
-from backend.scraping import *
-from backend.load import *
+from backend.clip_functions import classify_texts
 from backend.dataframes import results_to_dataframe
-from backend.clip_functions import *
-from backend.show import *
+from backend.load import load_yaml, get_random_element
+from backend.scraping import scrape_bbc_headlines
+from backend.show import plot_results
 import streamlit as st
 
 

@@ -1,8 +1,6 @@
 import requests
-import streamlit
 from bs4 import BeautifulSoup
-import random
-import streamlit as st
+
 
 def get_response(prefix, suffix):
     url = prefix+suffix

@@ -1,11 +1,11 @@
-from backend.clip_functions import _calculate_similarity, _normalise_features, classify_images
-from backend.scraping import *
-from backend.load import *
-from backend.show import *
-
-from backend.dataframes import *
+import requests
+from PIL.Image import Image
+from backend.clip_functions import classify_images
+from backend.dataframes import results_to_dataframe
+from backend.load import load_yaml, get_random_element
+from backend.scraping import scrape_unsplash_urls
+from backend.show import plot_results
 import streamlit as st
-
 
 
 @st.cache_data

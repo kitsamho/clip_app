@@ -2,6 +2,7 @@ import yaml
 import streamlit as st
 import random
 
+
 @st.cache_data
 def load_yaml(filename):
 
@@ -13,5 +14,10 @@ def get_random_element(_list):
     list_length = len(_list)
     random_index = random.randint(0, list_length)
     return _list[random_index]
+
+
+
+
+
 
 
