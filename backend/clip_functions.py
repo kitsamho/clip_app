@@ -1,4 +1,3 @@
-import PIL.Image
 from transformers import CLIPModel, AutoProcessor, AutoTokenizer
 import streamlit as st
 
@@ -26,7 +25,7 @@ def _normalise_features(features):
     return features
 
 
-def calculate_image_features(images: list, processor, model):
+def calculate_image_features(images: list, processor, model, normalise=True):
     """
     Calculate image features for a given list of images.
 
@@ -40,10 +39,13 @@ def calculate_image_features(images: list, processor, model):
     """
     inputs = processor(images=images, return_tensors="pt")
     image_features = model.get_image_features(**inputs)
-    return _normalise_features(image_features)
+    if normalise:
+        return _normalise_features(image_features)
+    else:
+        return image_features
 
 
-def calculate_text_features(texts: list, tokenizer, model):
+def calculate_text_features(texts: list, tokenizer, model, normalise=True):
     """
     Calculate text features for a given list of texts.
 
@@ -57,7 +59,10 @@ def calculate_text_features(texts: list, tokenizer, model):
     """
     inputs = tokenizer(texts, padding=True, return_tensors="pt")
     text_features = model.get_text_features(**inputs)
-    return _normalise_features(text_features)
+    if normalise:
+        return _normalise_features(text_features)
+    else:
+        return text_features
 
 
 def _calculate_similarity(input_features, output_features):

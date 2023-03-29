@@ -1,5 +1,5 @@
 import requests
-from PIL.Image import Image
+from PIL import Image
 from backend.clip_functions import classify_images
 from backend.dataframes import results_to_dataframe
 from backend.load import load_yaml, get_random_element
