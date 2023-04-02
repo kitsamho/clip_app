@@ -24,7 +24,7 @@ navigation_buttons = {"Zero Shot Image Classification": image_classification,
                       "Text Clustering": text_clustering,
                       "Semantic Search": semantic_search}
 
-st.sidebar.image('assets/OpenAI_Logo.png',width=300)
+st.sidebar.image('assets/OpenAI_Logo_old.png',width=300)
 
 st.sidebar.title('CLIP Demo')
 selection = st.sidebar.radio("Go to", list(navigation_buttons.keys()))
