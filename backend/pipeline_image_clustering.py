@@ -18,6 +18,7 @@ def get_user_input_dataframe(user_input: str, user_embedding: np.array):
 
 
 def image_clustering_loop(df_image_embeddings, processor, model):
+    st.write(df_image_embeddings.shape)
     user_image_url = st.text_input("Paste a URL to an image here", "https://media.licdn.com/dms/image/C4D03AQG_rr1doL-1pw/profile-displayphoto-shrink_800_800/0/1570957076434?e=1684972800&v=beta&t=ECN5TDRPRMUK7dma94RkoUQvetMCKyn2vWW2iZyjUDo")
     user_image = Image.open(requests.get(user_image_url, stream=True).raw).convert('L')
     user_image_embedding = calculate_image_features(user_image, processor, model, normalise=False).detach().numpy()[0]
@@ -27,7 +28,7 @@ def image_clustering_loop(df_image_embeddings, processor, model):
     df_plot['size'] = [1.5] * df_plot.shape[0]
     df_plot.loc[1250, 'size'] = 30
     plot = plot_image_clusters(df_plot)
-    st.altair_chart(plot, use_container_width=True)
+    st.altair_chart(plot)
     return
 
 

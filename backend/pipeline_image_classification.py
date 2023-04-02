@@ -24,7 +24,6 @@ def image_classification_loop(category, category_image_urls_dict, processor, mod
     c1, c2, c3 = st.columns((3, 2, 5))
     if 'image_keep' not in st.session_state:
         image_urls = category_image_urls_dict[category]
-        st.write(len(image_urls))
         url = get_random_element(image_urls)
         image = Image.open(requests.get(url, stream=True).raw)
         st.session_state['image_keep'] = image

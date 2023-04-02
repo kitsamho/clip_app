@@ -19,8 +19,8 @@ def delete_row(df, _index):
 def transform_umap_dataframe(df_umap, df_embeddings_merged, user_input):
     df_umap['size'] = 1
     df_umap['text'] = ''
-    df_umap.loc[3500, 'size'] = 5
-    df_umap.loc[3500, 'text'] = user_input
+    df_umap.loc[1500, 'size'] = 5
+    df_umap.loc[1500, 'text'] = user_input
     df_umap['caption'] = df_embeddings_merged['caption']
     df_umap['category'] = df_embeddings_merged['category']
     return df_umap

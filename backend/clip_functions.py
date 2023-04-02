@@ -3,7 +3,7 @@ import streamlit as st
 
 
 @st.cache_resource
-def load_clip(clip_model='openai/clip-vit-base-patch32'):
+def download_clip_model(clip_model='openai/clip-vit-base-patch32'):
     """
     Load the CLIP model and its associated tokenizer and processor from a given pre-trained model.
 
@@ -14,7 +14,7 @@ def load_clip(clip_model='openai/clip-vit-base-patch32'):
     Returns:
         A tuple of the CLIP model, tokenizer, and processor.
     """
-    st.write(f'Loading {clip_model}')
+    # st.write(f'Loading {clip_model}')
     model = CLIPModel.from_pretrained(clip_model)
     processor = AutoProcessor.from_pretrained(clip_model)
     tokenizer = AutoTokenizer.from_pretrained(clip_model)
