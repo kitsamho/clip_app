@@ -32,7 +32,8 @@ def image_classification_loop(category, category_image_urls_dict, processor, mod
     else:
         c1.image(st.session_state['image_keep'], width=400)
 
-    text_input_string = st.text_input('Choose some labels for this image - seperate labels with a comma e.g. "dog, cat"', 'dog, cat')
+    text_input_string = st.text_input('Choose some labels for this image - \
+            seperate labels with a comma e.g. "dog, cat" as this is how labels are split', 'dog, cat' )
     labels = [i for i in text_input_string.split(",")]
 
     predictions = classify_images(labels, st.session_state['image_keep'], processor, model, tokeniser)
