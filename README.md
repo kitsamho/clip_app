@@ -7,7 +7,7 @@ This repository contains a streamlit application that demonstrates how to use Op
 ## Installation
 Clone this repository 
 
-`git clone https://github.com/OpenAI-APAC/CLIP-Demo`
+`git clone https://github.com/kitsamho/clip_app`
 
 Install the required packages 
 
