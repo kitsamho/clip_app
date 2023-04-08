@@ -19,12 +19,12 @@ def get_unsplash_images():
     return category_image_urls
 
 
-def image_classification_loop(category, category_image_urls_dict, processor, model, tokeniser):
+def image_classification_loop(category_image_urls, processor, model, tokeniser):
 
     c1, c2, c3 = st.columns((3, 2, 5))
+    c1.subheader('Random Image')
     if 'image_keep' not in st.session_state:
-        image_urls = category_image_urls_dict[category]
-        url = get_random_element(image_urls)
+        url = get_random_element(category_image_urls)
         image = Image.open(requests.get(url, stream=True).raw)
         st.session_state['image_keep'] = image
         c1.image(image, width=400)

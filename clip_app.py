@@ -14,7 +14,6 @@ df_cached_embeddings_rock = load_cached_embeddings(cached_embedding_path_rock_ar
 
 cached_embedding_path_conceptual_captions = 'data/embeddings/text_clustering_embeds_ccaptioning.pickle'
 df_cached_embeddings_captions = load_cached_embeddings(cached_embedding_path_conceptual_captions).sample(1500)
-# st.write(df_cached_embeddings_captions)
 
 
 # Define menu items for each sub-app

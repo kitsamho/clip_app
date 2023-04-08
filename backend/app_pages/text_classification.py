@@ -1,16 +1,17 @@
+from backend.load import load_yaml
 from backend.pipeline_text_classification import get_bbc_headlines, text_classification_loop
 import streamlit as st
 
+from backend.show import tech_summary_side_bar
+
 
 def write(tokeniser, model):
+    tech_summary_side_bar('zero_shot_classification')
     st.title('Zero Shot Text Classification - BBC Headlines')
     st.markdown('#')
     st.markdown('#')
-    bbc_headlines_dict = get_bbc_headlines()
-    drop_down_choices = [k for k, v in bbc_headlines_dict.items()]
-    drop_down_choices.sort()
-    category = st.selectbox("Choose category", drop_down_choices, index=4)
-    text_classification_loop(category, bbc_headlines_dict, tokeniser, model)
+    bbc_headlines = get_bbc_headlines()
+    text_classification_loop(bbc_headlines, tokeniser, model)
     return
 
 

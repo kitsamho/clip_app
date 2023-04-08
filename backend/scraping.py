@@ -25,19 +25,18 @@ def get_unsplash_urls_from_soup(soup):
 
 
 def scrape_unsplash_urls(prefix, categories):
-    category_image_urls = {}
+    # category_image_urls = {}
+    images_scraped = []
     for category in categories:
         response = get_response(prefix, category)
         category_soup = get_soup(response)
-        category_image_urls[category] = get_unsplash_urls_from_soup(category_soup)
-    return category_image_urls
+        images_scraped.extend(get_unsplash_urls_from_soup(category_soup))
+    return images_scraped
 
 def get_bbc_headlines_from_soup(soup):
     bbc_headlines = []
     # Find all the headlines using the "h3" tag and "gs-c-promo-heading" class
     headlines= soup.find_all("p")
-
-
     # Loop through each headline and print the text
     for headline in headlines:
         try:
@@ -47,11 +46,11 @@ def get_bbc_headlines_from_soup(soup):
     return [i for i in bbc_headlines if len(i.split()) >=7]
 
 def scrape_bbc_headlines(prefix, categories: list):
-    category_texts = {}
+    headlines = []
     for category in categories:
         response = get_response(prefix, category)
         category_soup = get_soup(response)
-        category_texts[category] = get_bbc_headlines_from_soup(category_soup)
-    return category_texts
+        headlines.extend(get_bbc_headlines_from_soup(category_soup))
+    return headlines
 
 
