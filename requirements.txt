@@ -191,7 +191,6 @@ sentence-transformers==2.2.2
 sentencepiece==0.1.97
 service-identity==21.1.0
 simcse==0.4
-six @ file:///tmp/build/80754af9/six_1644875935023/work
 smart-open==6.3.0
 smmap==5.0.0
 sniffio==1.3.0
@@ -238,7 +237,6 @@ webencodings==0.5.1
 websocket-client==1.4.2
 widgetsnbextension==4.0.3
 xxhash==3.2.0
-yake @ git+https://github.com/LIAAD/yake@8d71d94ded93fb77f1361f62e5264f19b9c91cd7
 yarg==0.1.9
 yarl==1.8.2
 zipp==3.10.0
