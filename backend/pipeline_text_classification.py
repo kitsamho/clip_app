@@ -39,7 +39,7 @@ def text_classification_loop(bbc_headlines, tokeniser, model):
     probs = classify_texts(labels, st.session_state['text_keep'], model, tokeniser)
     df = results_to_dataframe(probs, labels)
     c3.subheader('Predicted probabilities')
-    c3.plotly_chart(plot_results(df, x_label='labels', y_label='probabilities'))
+    c3.plotly_chart(plot_results(df, x_label='labels', y_label='probabilities', color_discrete_sequence='lightblue'))
 
     more_headlines = st.empty()
     next_headline = more_headlines.button('Get new headline')

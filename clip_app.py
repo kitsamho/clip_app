@@ -1,5 +1,6 @@
 import streamlit as st
 from backend.app_pages import image_clustering, image_classification, text_classification, text_clustering, semantic_search
+from backend.app_pages import data
 from backend.clip_functions import download_clip_model
 from backend.load import load_yaml, load_cached_embeddings
 
@@ -21,9 +22,10 @@ navigation_buttons = {"Zero Shot Image Classification": image_classification,
                       "Zero Shot Text Classification": text_classification,
                       "Image Clustering": image_clustering,
                       "Text Clustering": text_clustering,
-                      "Semantic Search": semantic_search}
+                      "Semantic Search": semantic_search,
+                      "Appendix": data}
 
-st.sidebar.image('assets/OpenAI_Logo_old.png',width=300)
+st.sidebar.image('assets/OpenAI_Logo.png', width=300)
 
 st.sidebar.title('CLIP Demo')
 selection = st.sidebar.radio("Go to", list(navigation_buttons.keys()))
@@ -42,3 +44,6 @@ elif selection == 'Text Clustering':
 
 elif selection == 'Semantic Search':
     page.write(df_cached_embeddings_rock, model, tokeniser)
+
+elif selection == 'Appendix':
+    page.write()

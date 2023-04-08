@@ -8,25 +8,21 @@ BBC_CATEGORIES: ['technology','business','politics','science_and_environment','h
 
 CLIP_MODEL: ['openai/clip-vit-base-patch32']
 
-MORE_INFO: { 'zero_shot_classification': "CLIP's proficiency in zero-shot classification stems from its training on a vastly
-            diverse set of images and corresponding natural language descriptions. Because of this, CLIP is able 
-            to identify and categorize objects and concepts, even those it hasn't encountered before. 
-            By utilizing this general knowledge and understanding of the relationships between words and images, 
-            CLIP can accurately classify new data without the need for explicit training on those specific objects 
-            or concepts.",
-               'semantic_search': "Semantic search is a search technique that aims to understand the meaning and 
-            context of words and phrases in a query rather than just matching keywords. In the context of CLIP, 
-            semantic search involves using the model's ability to associate images with natural language descriptions 
-            to perform image search using text. This means that a user can enter a natural language query, and CLIP 
-            will return images that it believes are relevant to the meaning of the query, even if the images 
-            don't contain the exact words in the query. By using semantic search, CLIP enables a more intuitive and 
-            natural way of searching for images based on their content.",
-               'clustering': "CLIP embeddings can be used to cluster images and text based on their semantic similarities. 
-            To do this, each image or piece of text is first passed through CLIP to generate an embedding, which 
-             represents the meaning and content of the image or text in a high-dimensional vector space. These embeddings 
-             can then be used as input to other algorithms, such as UMAP (Uniform Manifold Approximation and 
-             Projection), which reduces the dimensionality of the embeddings to a lower number of dimensions while 
-             preserving their underlying structure. This enables the embeddings to be visualized in a way that 
-             highlights clusters of similar images or text. By using CLIP embeddings and clustering techniques like UMAP, 
-             it becomes possible to group images or text based on their semantic similarities." }
+MORE_INFO: { 'zero_shot_classification_imagery': "Because CLIP was trained on a diverse set of images and paired natural language 
+            descriptions, CLIP is able to generalize its understanding to new and unseen data and correctly classify both 
+            objective features *in the image* but also more abstract concepts *related to the image*. \n\nFeel free to experiment with more abstract concepts as 
+            well as more obvious objective image features with this app",
+            'zero_shot_classification_text': "Because CLIP was trained on a diverse set of images and paired natural language 
+             descriptions, CLIP is able to generalize its understanding to new and unseen data and correctly classify both 
+             objective features but also more abstract concepts.",
+            'semantic_search': "Semantic search is a search technique that aims to understand the meaning and context of 
+            words and phrases in a search query rather than just returning results that are aligned with keywords.\n\n 
+            CLIP enables a more intuitive and natural way of searching for images based on their content. One way of 
+            achieving this is by calculating the cosine similarity between input embeddings (search query) and target 
+            embeddings (images/other text)",
+            'clustering': "We can use CLIP's encoder to extract text and image embeddings from any input data source. 
+            Embeddings are mathematical representations of the input data. Amongst other things, these embeddings can 
+            be used to cluster similar items. By incorporating dimensionality reduction techniques such as UMAP, 
+            clusters can be visualised and interrogated." }
+
 
