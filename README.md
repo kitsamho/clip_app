@@ -35,8 +35,7 @@ This streamlit app allows users to classify images from the Unsplash website usi
 The app presents a random image from unsplash and the user can then enter one or more labels that they think describe the image, and the app will use the 
 CLIP model to generate a list of probabilities for each of the labels.
 
-<img src="assets/
-.png" alt="Alternate Text" width="800"/>
+<img src="assets/image_classification.png" alt="Alternate Text" width="800"/>
 
 ### Zero Shot Text Classification - BBC Headlines
 
