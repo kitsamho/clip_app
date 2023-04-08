@@ -35,34 +35,35 @@ This streamlit app allows users to classify images from the Unsplash website usi
 The app presents a random image from unsplash and the user can then enter one or more labels that they think describe the image, and the app will use the 
 CLIP model to generate a list of probabilities for each of the labels.
 
-<img src="assets/image_classification.png" alt="Alternate Text" width="800"/>
+<img src="assets/
+.png" alt="Alternate Text" width="800"/>
 
 ### Zero Shot Text Classification - BBC Headlines
 
-This Streamlit app performs text classification on news headlines scraped from the BBC news website. 
+This app performs text classification on news headlines scraped from the BBC news website. 
 It uses the OpenAI CLIP model to classify the headlines into user-specified labels. The app displays a random 
 headline from a category selected by the user, and the user can input labels for the headline. The app then uses 
 CLIP to classify the headline into those labels, and displays the predicted probabilities for each label. 
 The user can then request a new headline to classify. 
 
-
 <img src="assets/text_classification.png" alt="Alternate Text" width="800"/>
-
 
 ### Image Clustering
 
-The app uses CLIP to generate image embeddings the UMAP algorithm for 
+The app uses CLIP to generate image embeddings and the UMAP algorithm for 
 dimensionality reduction to visualize the clustering of images. The user can input a URL to an image 
 and the app will calculate its embedding and include it in the clustering. The resulting clusters are displayed as 
-a scatter plot where each point represents an image, and similar images are grouped together. 
-The app can be used to analyze collections of images and identify patterns or clusters within them.
+a scatter plot where each point represents an image, and similar images are grouped together.
+
+<img src="assets/image_clustering.png" alt="Alternate Text" width="800"/>
 
 ### Text Clustering
 
-This Streamlit app is a text clustering tool that allows the user to input a short caption and see it visualized 
+This app is a text clustering tool that allows the user to input a short caption and see it visualized 
 alongside a pre-existing dataset of text embeddings. The tool uses the UMAP algorithm to reduce the dimensionality 
-of the embeddings and then plots the resulting 2D space with Plotly. The user's input is added to the dataset and 
-can be distinguished from the pre-existing data with different colors and sizes.
+of the embeddings and then plots the resulting 2D space with Plotly. The user's input is added to the dataset.
+
+<img src="assets/text_clustering.png" alt="Alternate Text" width="800"/>
 
 ### Semantic Search
 
