@@ -11,3 +11,4 @@ streamlit==1.18.1
 transformers==4.27.0
 umap==0.1.1
 umap_learn==0.5.3
+torch==1.13.0
