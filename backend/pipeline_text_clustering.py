@@ -68,3 +68,4 @@ def text_clustering_loop(df_text_embeddings, tokeniser, model):
 
     # Show the plot in streamlit
     st.plotly_chart(fig)
+    return
