@@ -24,10 +24,10 @@ def rank_vectors(vector_a: np.ndarray, vectors_n: np.ndarray, labels: pd.Series)
     similarities = pd.DataFrame(cosine_similarity(vector_a.reshape(1,-1),np.vstack(vectors_n)).T)
 
     # Combine labels with similarity scores in a DataFrame
-    df_results = pd.concat([labels,similarities],axis=1)
+    df_results = pd.concat([labels, similarities],axis=1)
 
     # Sort the DataFrame by similarity scores in descending order
-    return df_results.sort_values(by=0,ascending=False).reset_index(drop=True)
+    return df_results.sort_values(by=0, ascending=False).reset_index(drop=True)
 
 
 def display_image_grid(urls, cols=3, width=300):
@@ -65,9 +65,27 @@ def display_image_grid(urls, cols=3, width=300):
 
 
 def semantic_search_loop(df_cached_embeddings, model, tokenizer):
+    """
+    This function takes a dataframe of cached embeddings, a model, and a tokenizer, and performs semantic search for
+    images related to the user's search query.
+
+    Args:
+        df_cached_embeddings (pandas.DataFrame): A dataframe of cached image embeddings
+        tokeniser: Tokeniser to use for pre-processing the text data
+        model: model : A pre-trained CLIP model.
+
+    Returns:
+        None
+    """
+    # Prompt user to input a search query
     search = st.text_input("Describe some images you want to see..", 'A band doing a photo shoot outside')
+
+    # Calculate the text embedding for the search query using the provided model and tokenizer
     search_embedding = calculate_text_features([search], tokenizer, model, normalise=False).detach().numpy()[0]
 
+    # Rank the cached image embeddings based on their similarity to the search query embedding
     df_results = rank_vectors(search_embedding, df_cached_embeddings.image_clip_rep, df_cached_embeddings[['url']])
 
+    # Display a grid of the top 10 images that are most similar to the search query
     display_image_grid(df_results.url.values[:10], 5, 300)
+    return
