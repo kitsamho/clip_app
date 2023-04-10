@@ -19,7 +19,12 @@ def get_user_input_dataframe(user_input: str, user_embedding: np.array):
 
 def image_clustering_loop(df_image_embeddings, processor, model):
     """
-    A function that generates image clusters and plots them using Streamlit and CLIP
+    Users can input a URL to an image (e.g. their LinkedIn photo or any link that links directly to an image (e.g. jpeg, .png)
+    The app uses CLIP to generate image embeddings for this user-inputted image
+    Pre-computed rock archive images are concatenated with this new user embedding
+    The UMAP algorithm is used for dimensionality reduction across the concatenated embedding space
+    The resulting markers/clusters are displayed as a scatter plot
+    Each marker in the scatter plot represents an image where similar images are grouped together
 
     Args:
 
