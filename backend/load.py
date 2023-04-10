@@ -24,10 +24,7 @@ def load_pickle(filename):
         data = pickle.load(f)
     return data
 
-@st.cache_data
-def load_cached_embeddings(path: str):
-    df = pd.read_pickle(path)
-    return df
+
 
 
 
