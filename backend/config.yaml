@@ -19,10 +19,10 @@ MORE_INFO: { 'zero_shot_classification_imagery': "Because CLIP was trained on a 
             words and phrases in a search query rather than just returning results that are aligned with keywords.\n\n 
             CLIP enables a more intuitive and natural way of searching for images based on their content. One way of 
             achieving this is by calculating the cosine similarity between input embeddings (search query) and target 
-            embeddings (images/other text)",
+            embeddings (images/other text) ",
             'clustering': "We can use CLIP's encoder to extract text and image embeddings from any input data source. 
             Embeddings are mathematical representations of the input data. Amongst other things, these embeddings can 
             be used to cluster similar items. By incorporating dimensionality reduction techniques such as UMAP, 
-            clusters can be visualised and interrogated." }
+            clusters can be visualised and interrogated. \n\nBe patient with this app, sometimes it can be slow to generate UMAP projections." }
 
 
