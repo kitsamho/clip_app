@@ -36,8 +36,7 @@ def image_clustering_loop(df_image_embeddings, processor, model):
         None
     """
     # Prompt the user to input their LinkedIn profile photo
-    user_image_url = st.text_input("Paste your Linkedin profile photo here and see what rock star you most likely resemble"\
-                                   " (you are the bigger orange marker)", "https://media.licdn.com/dms/image/C4E03AQH5HLLr9gqm9Q/profile-displayphoto-shrink_200_200/0/1548859027859?e=1686182400&v=beta&t=3l5MRUItcun3pZePOppk4daPG6J3Hu1S5qNMIC0GlyA")
+    user_image_url = st.text_input("Paste your Linkedin profile photo here and see what rock star you most likely resemble (you are the bigger orange marker)", "https://upload.wikimedia.org/wikipedia/commons/9/9e/Metallica_-_2003.jpg")
 
     # Add some empty lines for visual separation
     st.markdown('#')
