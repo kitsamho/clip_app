@@ -2,6 +2,8 @@
 
 This repository contains a streamlit application that demonstrates how to use OpenAI's CLIP model for a variety of natural language and computer vision tasks such as zero-shot classification, image clustering, text clustering, and semantic search.
 
+Deployed App: https://openai-clip-utilities.streamlit.app/
+
 ---
 
 ## Installation
