@@ -13,6 +13,8 @@ Install the required packages
 
 ```pip install -r requirements.txt```
 
+Note - This app was made using python 3.9.18
+
 ---
 
 ## Use
