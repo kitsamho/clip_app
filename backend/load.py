@@ -1,6 +1,4 @@
 import pickle
-
-import pandas as pd
 import yaml
 import streamlit as st
 import random
