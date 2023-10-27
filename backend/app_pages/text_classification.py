@@ -1,4 +1,3 @@
-from backend.load import load_yaml
 from backend.pipeline_text_classification import get_bbc_headlines, text_classification_loop
 import streamlit as st
 
