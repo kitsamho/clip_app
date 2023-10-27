@@ -1,4 +1,3 @@
-from backend.load import load_yaml
 from backend.pipeline_semantic_search import semantic_search_loop
 import streamlit as st
 
